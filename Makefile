@@ -5,7 +5,7 @@ include .env
 .PHONY: help
 
 shell-back: ## -Enter_inside_of_back_shell
-	docker exec -it economyControl bash
+	docker exec -it $(DOCKER_CONTAINER) bash
 
 shell-db: ## -Enter_inside_of_database_shell
 	docker exec -it $(DOCKER_DATABASE_CONTAINER) bash
