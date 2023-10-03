@@ -2,9 +2,7 @@
 
 declare(strict_types=1);
 
-
 namespace Src\Auth\Infrastructure\Controllers;
-
 
 use Exception;
 use Illuminate\Http\JsonResponse;
@@ -30,19 +28,18 @@ final class AuthPostController
             $request->get('password')
         );
 
-        if (Auth::attempt(['email' => $loginRequest->email(), 'password' => $loginRequest->password()])) {
-            $user = Auth::user();
+        $token = auth()->attempt(['email' => $loginRequest->email(), 'password' => $loginRequest->password()]);
 
-            $token = $user->createToken('token');
-
-            return response()->json(
-                [
-                    'token' => $token->plainTextToken,
-                ]
-            );
+        if (!$token) {
+            return response()->json('cannot login, email or password are wrong', Response::HTTP_UNAUTHORIZED);
         }
-
-        return response()->json('cannot login, email or password are wrong', Response::HTTP_UNAUTHORIZED);
+        return response()->json(
+            [
+                'token'      => $token,
+                'user'       => Auth::user(),
+                'token_type' => 'bearer'
+            ]
+        );
     }
 
     /**

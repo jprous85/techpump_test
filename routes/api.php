@@ -17,3 +17,10 @@ use Src\Auth\Infrastructure\Controllers\AuthPostController;
 
 Route::group([], __DIR__ . '/Auth/Auth.php');
 
+
+
+Route::middleware('api')->group(function () {
+    Route::prefix('/users')
+        ->group(__DIR__ . '/User/User.php');
+});
+
