@@ -59,6 +59,10 @@ return [
 
     'asset_url' => env('ASSET_URL'),
 
+    'url_test' => env('APP_URL_TEST', 'http://localhost:8083'),
+
+    'accept_test' => env('ACCEPT_TEST', false),
+
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
