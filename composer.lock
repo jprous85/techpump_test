@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa322c53454393ed775cfe4807d54a50",
+    "content-hash": "cdc0ab3b366cf8ef8598b9215b199e74",
     "packages": [
         {
             "name": "brick/math",
@@ -2387,6 +2387,93 @@
                 }
             ],
             "time": "2023-02-25T19:38:58+00:00"
+        },
+        {
+            "name": "programandoconcabeza/env-management",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/programandoconcabeza/envManagement.git",
+                "reference": "938fbc8eae0e787cd9b3f8456fd9805af64676c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/programandoconcabeza/envManagement/zipball/938fbc8eae0e787cd9b3f8456fd9805af64676c1",
+                "reference": "938fbc8eae0e787cd9b3f8456fd9805af64676c1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "ext-readline": "*",
+                "ext-zip": "*",
+                "php": ">=7.4",
+                "programandoconcabeza/php-color-cli": "^1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.6.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ProgramandoConCabeza\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "programandoconcabeza",
+                    "email": "programandoconcabeza@gmail.com"
+                }
+            ],
+            "description": "management of env files",
+            "support": {
+                "issues": "https://github.com/programandoconcabeza/envManagement/issues",
+                "source": "https://github.com/programandoconcabeza/envManagement/tree/1.0.0"
+            },
+            "time": "2023-02-20T15:56:02+00:00"
+        },
+        {
+            "name": "programandoconcabeza/php-color-cli",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/programandoconcabeza/PhpColorCli.git",
+                "reference": "ed8a2f41c0bd85fbc667c6529787371f4ef17b6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/programandoconcabeza/PhpColorCli/zipball/ed8a2f41c0bd85fbc667c6529787371f4ef17b6e",
+                "reference": "ed8a2f41c0bd85fbc667c6529787371f4ef17b6e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ProgramandoConCabeza\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "programandoconcabeza",
+                    "email": "programandoconcabeza@gmail.com"
+                }
+            ],
+            "description": "show text in php console line interface with colors",
+            "support": {
+                "issues": "https://github.com/programandoconcabeza/PhpColorCli/issues",
+                "source": "https://github.com/programandoconcabeza/PhpColorCli/tree/1.0.0"
+            },
+            "time": "2023-02-20T15:49:20+00:00"
         },
         {
             "name": "psr/clock",
