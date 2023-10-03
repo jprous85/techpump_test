@@ -1,8 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use Src\Auth\Infrastructure\Controllers\AuthPostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +15,8 @@ use Src\Auth\Infrastructure\Controllers\AuthPostController;
 
 Route::group([], __DIR__ . '/Auth/Auth.php');
 
-
-
 Route::middleware('auth.jwt')->group(function () {
-    Route::prefix('/users')
-        ->group(__DIR__ . '/User/User.php');
+    Route::prefix('/users')->group(__DIR__ . '/User/User.php');
+    Route::prefix('/products')->group(__DIR__ . '/Product/Product.php');
 });
 

@@ -8,6 +8,9 @@
         <testsuite name="User">
             <directory>./tests/User</directory>
         </testsuite>
+        <testsuite name="Product">
+            <directory>./tests/Product</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>

@@ -8,7 +8,7 @@ use Src\User\Domain\User\User;
 use Src\User\Domain\User\Repositories\UserRepository;
 
 use Src\User\Domain\User\ValueObjects\UserUuidVO;
-use Src\User\Infrastructure\Adapter\UserAdapter;
+use Src\User\Infrastructure\Adapter\ProductAdapter;
 
 
 final class UserMYSQLRepository implements UserRepository
@@ -21,7 +21,7 @@ final class UserMYSQLRepository implements UserRepository
     public function show(UserUuidVO $id): ?User
     {
         $query = $this->model->find($id->value());
-        return (new UserAdapter($query))->userModelAdapter();
+        return (new ProductAdapter($query))->userModelAdapter();
     }
 
     public function showAll(): array
@@ -30,7 +30,7 @@ final class UserMYSQLRepository implements UserRepository
         $users               = [];
 
         foreach ($eloquent_users as $eloquent_user) {
-            $users[] = (new UserAdapter($eloquent_user))->userModelAdapter();
+            $users[] = (new ProductAdapter($eloquent_user))->userModelAdapter();
         }
         return $users;
 
