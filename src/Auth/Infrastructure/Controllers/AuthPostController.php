@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Src\Auth\Application\Request\LoginRequest;
 use Src\User\Infrastructure\Persistence\ORM\UserORMModel;
 use Symfony\Component\HttpFoundation\Response;
+use JWTAuth;
 
 final class AuthPostController
 {
@@ -28,7 +29,7 @@ final class AuthPostController
             $request->get('password')
         );
 
-        $token = auth()->attempt(['email' => $loginRequest->email(), 'password' => $loginRequest->password()]);
+        $token = JWTAuth::attempt(['email' => $loginRequest->email(), 'password' => $loginRequest->password()]);
 
         if (!$token) {
             return response()->json('cannot login, email or password are wrong', Response::HTTP_UNAUTHORIZED);

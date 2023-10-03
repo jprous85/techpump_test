@@ -19,7 +19,7 @@ Route::group([], __DIR__ . '/Auth/Auth.php');
 
 
 
-Route::middleware('api')->group(function () {
+Route::middleware('auth.jwt')->group(function () {
     Route::prefix('/users')
         ->group(__DIR__ . '/User/User.php');
 });
