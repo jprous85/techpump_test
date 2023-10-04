@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Cart\Application\Response;
+namespace Src\Cart\Application\Cart\Response;
 
 final class CartResponses
 {

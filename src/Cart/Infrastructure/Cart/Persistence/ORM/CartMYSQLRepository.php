@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace Src\Cart\Infrastructure\Cart\Persistence\ORM;
 
 use Src\Cart\Domain\Cart\Cart;
+use Src\Cart\Domain\Cart\CartConstants;
 use Src\Cart\Domain\Cart\Repositories\CartRepository;
+use Src\Cart\Domain\Cart\ValueObjects\CartUserUuidVO;
 use Src\Cart\Domain\Cart\ValueObjects\CartUuidVO;
 use Src\Cart\Infrastructure\Cart\Adapter\CartAdapter;
 
@@ -15,6 +17,15 @@ final class CartMYSQLRepository implements CartRepository
 
     public function __construct(private CartORMModel $model)
     {
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function getCartByUser(CartUserUuidVO $cartUserUuidVO): ?Cart
+    {
+        $query = $this->model->where('user_uuid', $cartUserUuidVO->value())->where('status', CartConstants::DRAFT)->first();
+        return (new CartAdapter($query))->cartModelAdapter();
     }
 
     /**

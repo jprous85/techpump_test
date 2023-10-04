@@ -2,14 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Src\Cart\Application\UseCases;
+namespace Src\Cart\Application\Cart\UseCases;
 
-use Src\Cart\Application\Request\ShowCartRequest;
-use Src\Cart\Application\Request\UpdateCartRequest;
-use Src\Cart\Application\Response\CartResponse;
-use Src\Cart\Domain\Cart\Repositories\CartRepository;
+use Src\Cart\Application\Cart\Request\ShowCartRequest;
+use Src\Cart\Application\Cart\Request\UpdateCartRequest;
+use Src\Cart\Application\Cart\Response\CartResponse;
 use Src\Cart\Domain\Cart\Cart;
-
+use Src\Cart\Domain\Cart\Repositories\CartRepository;
 use Src\Cart\Domain\Cart\ValueObjects\CartStatusVO;
 
 

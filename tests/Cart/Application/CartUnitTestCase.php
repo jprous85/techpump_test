@@ -2,27 +2,24 @@
 
 namespace Tests\Cart\Application;
 
-use Src\Cart\Application\Request\ShowCartRequest;
-use Src\Cart\Application\Request\UpdateCartRequest;
-use Src\Cart\Application\Response\CartResponse;
-use Src\Cart\Application\Response\CartResponses;
-use Src\Cart\Application\UseCases\CreateCart;
-use Src\Cart\Application\UseCases\ShowCart;
-use Src\Cart\Application\UseCases\ShowAllCart;
-use Src\Cart\Application\UseCases\UpdateCart;
-use Src\Cart\Application\UseCases\DeleteCart;
-use Src\Cart\Domain\Cart\Repositories\CartRepository;
-
-use Src\Cart\Application\Request\CreateCartRequest;
-use Src\Cart\Application\Request\DeleteCartRequest;
-
-use Tests\Cart\Domain\Cart\ValueObjects\CartUuidVOMother;
-
-
 use Mockery;
 use Mockery\MockInterface;
+use Src\Cart\Application\Cart\Request\CreateCartRequest;
+use Src\Cart\Application\Cart\Request\DeleteCartRequest;
+use Src\Cart\Application\Cart\Request\ShowCartRequest;
+use Src\Cart\Application\Cart\Request\UpdateCartRequest;
+use Src\Cart\Application\Cart\Response\CartResponse;
+use Src\Cart\Application\Cart\Response\CartResponses;
+use Src\Cart\Application\Cart\UseCases\CreateCart;
+use Src\Cart\Application\Cart\UseCases\DeleteCart;
+use Src\Cart\Application\Cart\UseCases\ShowAllCart;
+use Src\Cart\Application\Cart\UseCases\ShowCart;
+use Src\Cart\Application\Cart\UseCases\UpdateCart;
+use Src\Cart\Domain\Cart\Repositories\CartRepository;
 use Tests\Cart\Domain\Cart\CartMother;
+use Tests\Cart\Domain\Cart\ValueObjects\CartUuidVOMother;
 use Tests\TestCase;
+
 
 abstract class CartUnitTestCase extends TestCase
 {

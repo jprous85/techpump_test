@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Src\Cart\Application\UseCases;
+namespace Src\Cart\Application\Cart\UseCases;
 
-use Src\Cart\Application\Request\DeleteCartRequest;
-use Src\Cart\Application\Request\ShowCartRequest;
+use Src\Cart\Application\Cart\Request\DeleteCartRequest;
+use Src\Cart\Application\Cart\Request\ShowCartRequest;
 use Src\Cart\Domain\Cart\Repositories\CartRepository;
 use Src\Cart\Domain\Cart\ValueObjects\CartUuidVO;
 

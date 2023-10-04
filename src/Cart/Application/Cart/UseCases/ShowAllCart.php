@@ -2,10 +2,10 @@
 
 declare(strict_types = 1);
 
-namespace Src\Cart\Application\UseCases;
+namespace Src\Cart\Application\Cart\UseCases;
 
-use Src\Cart\Application\Response\CartResponse;
-use Src\Cart\Application\Response\CartResponses;
+use Src\Cart\Application\Cart\Response\CartResponse;
+use Src\Cart\Application\Cart\Response\CartResponses;
 use Src\Cart\Domain\Cart\Repositories\CartRepository;
 
 final class ShowAllCart

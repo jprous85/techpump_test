@@ -2,10 +2,10 @@
 
 namespace Tests\Cart\Application\Request;
 
-use Src\Cart\Application\Request\CreateCartRequest;
-use Tests\Cart\Domain\Cart\ValueObjects\CartUuidVOMother;
-use Tests\Cart\Domain\Cart\ValueObjects\CartUserUuidVOMother;
+use Src\Cart\Application\Cart\Request\CreateCartRequest;
 use Tests\Cart\Domain\Cart\ValueObjects\CartStatusVOMother;
+use Tests\Cart\Domain\Cart\ValueObjects\CartUserUuidVOMother;
+use Tests\Cart\Domain\Cart\ValueObjects\CartUuidVOMother;
 
 
 final class CreateCartRequestMother

@@ -8,6 +8,9 @@ namespace Src\Cart\Domain\Cart;
 
 final class CartConstants
 {
-    public const STATUS = ['DRAFT', 'PROCESSED'];
+    public const DRAFT = 'DRAFT';
+    public const PROCESSED = 'PROCESSED';
+
+    public const STATUS = [self::DRAFT, self::PROCESSED];
 
 }

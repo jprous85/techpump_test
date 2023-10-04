@@ -2,7 +2,7 @@
 
 namespace Tests\Cart\Application\Request;
 
-use Src\Cart\Application\Request\ShowCartRequest;
+use Src\Cart\Application\Cart\Request\ShowCartRequest;
 use Tests\Cart\Domain\Cart\ValueObjects\CartUuidVOMother;
 
 

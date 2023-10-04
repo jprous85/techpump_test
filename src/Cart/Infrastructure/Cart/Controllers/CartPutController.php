@@ -6,8 +6,8 @@ namespace Src\Cart\Infrastructure\Cart\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Src\Cart\Application\Request\UpdateCartRequest;
-use Src\Cart\Application\UseCases\UpdateCart;
+use Src\Cart\Application\Cart\Request\UpdateCartRequest;
+use Src\Cart\Application\Cart\UseCases\UpdateCart;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use function response;
 

@@ -2,16 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Src\Cart\Application\Response;
+namespace Src\Cart\Application\Cart\Response;
 
 
 use Src\Cart\Domain\Cart\Cart;
-
-use Src\Cart\Domain\Cart\ValueObjects\CartUuidVO;
-use Src\Cart\Domain\Cart\ValueObjects\CartUserUuidVO;
-use Src\Cart\Domain\Cart\ValueObjects\CartStatusVO;
 use Src\Cart\Domain\Cart\ValueObjects\CartCreatedAtVO;
+use Src\Cart\Domain\Cart\ValueObjects\CartStatusVO;
 use Src\Cart\Domain\Cart\ValueObjects\CartUpdatedAtVO;
+use Src\Cart\Domain\Cart\ValueObjects\CartUserUuidVO;
+use Src\Cart\Domain\Cart\ValueObjects\CartUuidVO;
 
 
 final class CartResponse

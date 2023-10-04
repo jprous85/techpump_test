@@ -2,16 +2,14 @@
 
 declare(strict_types = 1);
 
-namespace Src\Cart\Application\UseCases;
+namespace Src\Cart\Application\Cart\UseCases;
 
-use Src\Cart\Application\Request\CreateCartRequest;
+use Src\Cart\Application\Cart\Request\CreateCartRequest;
 use Src\Cart\Domain\Cart\Cart;
 use Src\Cart\Domain\Cart\Repositories\CartRepository;
-
-
-use Src\Cart\Domain\Cart\ValueObjects\CartUuidVO;
-use Src\Cart\Domain\Cart\ValueObjects\CartUserUuidVO;
 use Src\Cart\Domain\Cart\ValueObjects\CartStatusVO;
+use Src\Cart\Domain\Cart\ValueObjects\CartUserUuidVO;
+use Src\Cart\Domain\Cart\ValueObjects\CartUuidVO;
 
 
 final class CreateCart

@@ -3,10 +3,13 @@
 namespace Src\Cart\Domain\Cart\Repositories;
 
 use Src\Cart\Domain\Cart\Cart;
+use Src\Cart\Domain\Cart\ValueObjects\CartUserUuidVO;
 use Src\Cart\Domain\Cart\ValueObjects\CartUuidVO;
 
 interface CartRepository
 {
+    public function getCartByUser(CartUserUuidVO $cartUserUuidVO): ?Cart;
+
     public function show(CartUuidVO $id): ?Cart;
 
     public function showAll(): array;
@@ -16,4 +19,5 @@ interface CartRepository
     public function update(Cart $cart): void;
 
     public function delete(CartUuidVO $id): void;
+
 }

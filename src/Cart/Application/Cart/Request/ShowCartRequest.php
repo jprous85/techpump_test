@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Src\Cart\Application\Request;
+namespace Src\Cart\Application\Cart\Request;
 
 class ShowCartRequest
 {
