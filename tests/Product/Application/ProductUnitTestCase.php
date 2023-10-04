@@ -4,6 +4,8 @@ namespace Tests\Product\Application;
 
 use Src\Product\Application\Request\ShowProductRequest;
 use Src\Product\Application\Request\UpdateProductRequest;
+use Src\Product\Application\Response\ProductResponse;
+use Src\Product\Application\Response\ProductResponses;
 use Src\Product\Application\UseCases\CreateProduct;
 use Src\Product\Application\UseCases\ShowProduct;
 use Src\Product\Application\UseCases\ShowAllProduct;
@@ -31,6 +33,9 @@ abstract class ProductUnitTestCase extends TestCase
         $this->mock   = $this->repository();
     }
 
+    /**
+     * @throws \Exception
+     */
     protected function shouldCreate(CreateProductRequest $request)
     {
         $this->mock->shouldReceive('save');
@@ -39,22 +44,38 @@ abstract class ProductUnitTestCase extends TestCase
         $creator->__invoke($request);
     }
 
+    /**
+     * @throws \Exception
+     */
     protected function shouldFind(ShowProductRequest $request)
     {
         $product = ProductMother::random();
+        $productResponse = ProductResponse::SelfProductResponse($product);
 
         $this->mock->shouldReceive('show')->andReturn($product);
 
         $finder = new ShowProduct($this->mock);
-        $finder->__invoke($request);
+        $result = $finder->__invoke($request);
+
+        $this->assertEquals($productResponse, $result);
     }
 
     protected function shouldFindAll()
     {
-        $this->mock->shouldReceive('showAll')->andReturns(array());
+        $product1 = ProductMother::random();
+        $product2 = ProductMother::random();
+
+        $productResponse1 = ProductResponse::SelfProductResponse($product1);
+        $productResponse2 = ProductResponse::SelfProductResponse($product2);
+
+        $productResponses = new ProductResponses($productResponse1, $productResponse2);
+
+        $this->mock->shouldReceive('showAll')->andReturns([$product1, $product2]);
 
         $finder = new ShowAllProduct($this->mock);
-        $finder->__invoke();
+        $result = $finder->__invoke();
+
+        $this->assertEquals($productResponses, $result);
     }
 
     protected function shouldUpdate(string $uuid, UpdateProductRequest $request)
