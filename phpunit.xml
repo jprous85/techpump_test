@@ -11,6 +11,9 @@
         <testsuite name="Product">
             <directory>./tests/Product</directory>
         </testsuite>
+        <testsuite name="Cart">
+            <directory>./tests/Cart</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>

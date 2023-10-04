@@ -18,5 +18,6 @@ Route::group([], __DIR__ . '/Auth/Auth.php');
 Route::middleware('auth.jwt')->group(function () {
     Route::prefix('/users')->group(__DIR__ . '/User/User.php');
     Route::prefix('/products')->group(__DIR__ . '/Product/Product.php');
+    Route::prefix('/carts')->group(__DIR__ . '/Cart/Cart.php');
 });
 
