@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Src\Cart\Domain\Cart\ValueObjects;
 
-use Src\Cart\Domain\CartConstants;
+use Src\Cart\Domain\Cart\CartConstants;
 use Src\Shared\Domain\ValueObjects\StringVO;
 
 final class CartStatusVO extends StringVO

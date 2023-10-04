@@ -2,14 +2,14 @@
 
 declare(strict_types = 1);
 
-namespace Src\Cart\Infrastructure\Controllers;
+namespace Src\Cart\Infrastructure\Cart\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Src\Cart\Application\Request\UpdateCartRequest;
 use Src\Cart\Application\UseCases\UpdateCart;
-
 use Symfony\Component\HttpFoundation\JsonResponse;
+use function response;
 
 final class CartPutController
 {

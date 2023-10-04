@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 
-namespace Src\Cart\Domain;
+namespace Src\Cart\Domain\Cart;
 
 
 final class CartConstants

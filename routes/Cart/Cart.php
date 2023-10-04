@@ -1,9 +1,9 @@
 <?php
 
-use Src\Cart\Infrastructure\Controllers\CartDeleteController;
-use Src\Cart\Infrastructure\Controllers\CartGetController;
-use Src\Cart\Infrastructure\Controllers\CartPostController;
-use Src\Cart\Infrastructure\Controllers\CartPutController;
+use Src\Cart\Infrastructure\Cart\Controllers\CartDeleteController;
+use Src\Cart\Infrastructure\Cart\Controllers\CartGetController;
+use Src\Cart\Infrastructure\Cart\Controllers\CartPostController;
+use Src\Cart\Infrastructure\Cart\Controllers\CartPutController;
 
 Route::get('/read', [CartGetController::class, 'read']);
 Route::get('/{id}/show', [CartGetController::class, 'show']);

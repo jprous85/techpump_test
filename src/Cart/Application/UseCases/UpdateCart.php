@@ -22,6 +22,9 @@ final class UpdateCart
         $this->show__cart = new ShowCart($this->repository);
     }
 
+    /**
+     * @throws \Exception
+     */
     public function __invoke(string $uuid, UpdateCartRequest $request): void
     {
         $response = ($this->show__cart)(new ShowCartRequest($uuid));
@@ -31,6 +34,9 @@ final class UpdateCart
         $this->repository->update($cart);
     }
 
+    /**
+     * @throws \Exception
+     */
     private function mapper(Cart $cart, $request): Cart
     {
         $status = $request->getStatus() ? new CartStatusVO($request->getStatus()) : $cart->getStatus();

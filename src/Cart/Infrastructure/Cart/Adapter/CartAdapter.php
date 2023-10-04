@@ -1,6 +1,6 @@
 <?php
 
-namespace Src\Cart\Infrastructure\Adapter;
+namespace Src\Cart\Infrastructure\Cart\Adapter;
 
 
 use Exception;
@@ -11,7 +11,7 @@ use Src\Cart\Domain\Cart\ValueObjects\CartStatusVO;
 use Src\Cart\Domain\Cart\ValueObjects\CartUpdatedAtVO;
 use Src\Cart\Domain\Cart\ValueObjects\CartUserUuidVO;
 use Src\Cart\Domain\Cart\ValueObjects\CartUuidVO;
-use Src\Cart\Infrastructure\Persistence\ORM\CartORMModel;
+use Src\Cart\Infrastructure\Cart\Persistence\ORM\CartORMModel;
 
 class CartAdapter implements CartAdapterRepository
 {

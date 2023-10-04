@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Src\Cart\Infrastructure\Controllers;
+namespace Src\Cart\Infrastructure\Cart\Controllers;
 
 use Src\Cart\Application\Request\ShowCartRequest;
 use Src\Cart\Application\UseCases\ShowAllCart;
 use Src\Cart\Application\UseCases\ShowCart;
-
 use Symfony\Component\HttpFoundation\JsonResponse;
+use function response;
 
 final class CartGetController
 {

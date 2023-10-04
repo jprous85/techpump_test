@@ -2,13 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Src\Cart\Infrastructure\Persistence\ORM;
+namespace Src\Cart\Infrastructure\Cart\Persistence\ORM;
 
 use Src\Cart\Domain\Cart\Cart;
 use Src\Cart\Domain\Cart\Repositories\CartRepository;
-
 use Src\Cart\Domain\Cart\ValueObjects\CartUuidVO;
-use Src\Cart\Infrastructure\Adapter\CartAdapter;
+use Src\Cart\Infrastructure\Cart\Adapter\CartAdapter;
 
 
 final class CartMYSQLRepository implements CartRepository

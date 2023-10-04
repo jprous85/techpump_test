@@ -2,7 +2,7 @@
 
 declare(strict_types = 1);
 
-namespace Src\Cart\Infrastructure\Persistence\ORM;
+namespace Src\Cart\Infrastructure\Cart\Persistence\ORM;
 
 use Illuminate\Database\Eloquent\Model;
 
