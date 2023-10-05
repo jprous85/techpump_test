@@ -17,7 +17,7 @@ use Src\Cart\Infrastructure\CartItem\Persistence\CartItemORMModel;
 class CartItemAdapter implements CartItemAdapterRepository
 {
     public function __construct(
-        private CartItemORMModel $cartItem
+        private ?CartItemORMModel $cartItem
     )
     {
     }

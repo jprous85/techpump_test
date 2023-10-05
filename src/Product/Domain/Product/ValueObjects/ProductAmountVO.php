@@ -18,6 +18,9 @@ final class ProductAmountVO extends IntegerVO
         parent::__construct($value);
     }
 
+    /**
+     * @throws \Exception
+     */
     private function validateAmount(int $amount)
     {
         if ($amount < 0) {

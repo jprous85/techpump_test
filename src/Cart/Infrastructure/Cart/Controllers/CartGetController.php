@@ -43,6 +43,6 @@ final class CartGetController
     {
         $userUuid = Auth::user()->uuid;
         $request = new UserUuidCartRequest($userUuid);
-        return response()->json(($this->showCartWithItems)($request));
+        return response()->json(($this->showCartWithItems)($request)->toArray());
     }
 }

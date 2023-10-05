@@ -19,7 +19,7 @@ use Src\Product\Infrastructure\Persistence\ORM\ProductORMModel;
 class ProductAdapter implements ProductAdapterRepository
 {
     public function __construct(
-        private ProductORMModel $product
+        private ?ProductORMModel $product
     )
     {
     }

@@ -12,7 +12,7 @@ use Src\Cart\Application\CartItem\Request\CreateCartItemRequest;
 use Src\Cart\Domain\Cart\Repositories\CartRepository;
 use Src\Cart\Domain\Cart\ValueObjects\CartUserUuidVO;
 
-final class CartItemStrategy
+final class CartItemIncludeStrategy
 {
     public function __construct(
         private CreateCart $createCart,

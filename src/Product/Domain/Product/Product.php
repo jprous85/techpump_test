@@ -147,4 +147,23 @@ final class Product
 		return $this->updated_at;
 	}
 
+
+    /**
+     * @throws \Exception
+     */
+    public function reduceAmount(): self
+    {
+        $this->amount = new ProductAmountVO($this->amount->value() - 1);
+        return $this;
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function increaseAmount(): self
+    {
+        $this->amount = new ProductAmountVO($this->amount->value() + 1);
+        return $this;
+    }
+
 }
