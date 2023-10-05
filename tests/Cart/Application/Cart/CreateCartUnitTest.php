@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Cart\Application;
+namespace Tests\Cart\Application\Cart;
 
-use Tests\Cart\Application\Request\CreateCartRequestMother;
+use Tests\Cart\Application\Cart\Request\CreateCartRequestMother;
 
 
 class CreateCartUnitTest extends CartUnitTestCase

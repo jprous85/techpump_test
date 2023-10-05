@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tests\Cart\Infrastructure;
+namespace Tests\Cart\Infrastructure\Cart;
 
 use Symfony\Component\HttpFoundation\Response;
 use Tests\Shared\Infrastructure\Controllers\AcceptTestBase;

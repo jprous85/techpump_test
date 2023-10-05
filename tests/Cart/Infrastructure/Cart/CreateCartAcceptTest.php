@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tests\Cart\Infrastructure;
+namespace Tests\Cart\Infrastructure\Cart;
 
 use Symfony\Component\HttpFoundation\Response;
-use Tests\Cart\Infrastructure\Request\CartRequestMother;
+use Tests\Cart\Infrastructure\Cart\Request\CartRequestMother;
 use Tests\Shared\Infrastructure\Controllers\AcceptTestBase;
+use function dump;
 
 final class CreateCartAcceptTest extends AcceptTestBase
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Cart\Application;
+namespace Tests\Cart\Application\Cart;
 
 use Mockery;
 use Mockery\MockInterface;

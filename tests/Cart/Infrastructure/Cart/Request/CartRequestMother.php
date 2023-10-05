@@ -1,12 +1,12 @@
 <?php
 
-namespace Tests\Cart\Infrastructure\Request;
+namespace Tests\Cart\Infrastructure\Cart\Request;
 
-use Tests\Cart\Domain\Cart\ValueObjects\CartUuidVOMother;
-use Tests\Cart\Domain\Cart\ValueObjects\CartUserUuidVOMother;
-use Tests\Cart\Domain\Cart\ValueObjects\CartStatusVOMother;
 use Tests\Cart\Domain\Cart\ValueObjects\CartCreatedAtVOMother;
+use Tests\Cart\Domain\Cart\ValueObjects\CartStatusVOMother;
 use Tests\Cart\Domain\Cart\ValueObjects\CartUpdatedAtVOMother;
+use Tests\Cart\Domain\Cart\ValueObjects\CartUserUuidVOMother;
+use Tests\Cart\Domain\Cart\ValueObjects\CartUuidVOMother;
 
 
 final class CartRequestMother

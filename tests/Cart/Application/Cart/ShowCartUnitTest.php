@@ -1,9 +1,9 @@
 <?php
 
-namespace Tests\Cart\Application;
+namespace Tests\Cart\Application\Cart;
 
 
-use Tests\Cart\Application\Request\ShowCartRequestMother;
+use Tests\Cart\Application\Cart\Request\ShowCartRequestMother;
 
 class ShowCartUnitTest extends CartUnitTestCase
 {

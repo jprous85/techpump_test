@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Cart\Application\Request;
+namespace Tests\Cart\Application\Cart\Request;
 
 use Src\Cart\Application\Cart\Request\DeleteCartRequest;
 use Tests\Cart\Domain\Cart\ValueObjects\CartUuidVOMother;
