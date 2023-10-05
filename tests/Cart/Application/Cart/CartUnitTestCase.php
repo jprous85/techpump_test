@@ -29,7 +29,7 @@ abstract class CartUnitTestCase extends TestCase
     {
         parent::setUp();
 
-        $this->mock   = $this->repository();
+        $this->mock = $this->repository();
     }
 
     protected function shouldCreate(CreateCartRequest $request)
@@ -43,7 +43,7 @@ abstract class CartUnitTestCase extends TestCase
 
     protected function shouldFind(ShowCartRequest $request)
     {
-        $cart = CartMother::random();
+        $cart         = CartMother::random();
         $cartResponse = CartResponse::SelfCartResponse($cart);
 
         $this->mock->shouldReceive('show')->andReturn($cart);
@@ -57,8 +57,8 @@ abstract class CartUnitTestCase extends TestCase
     protected function shouldFindAll()
     {
 
-        $cart1 = CartMother::random();
-        $cart2 = CartMother::random();
+        $cart1         = CartMother::random();
+        $cart2         = CartMother::random();
         $cartResponse1 = CartResponse::SelfCartResponse($cart1);
         $cartResponse2 = CartResponse::SelfCartResponse($cart2);
 
@@ -94,7 +94,7 @@ abstract class CartUnitTestCase extends TestCase
         $delete->__invoke($uuid);
     }
 
-    private function repository(): MockInterface | CartRepository
+    private function repository(): MockInterface|CartRepository
     {
         return Mockery::mock(CartRepository::class);
     }
